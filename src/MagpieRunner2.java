@@ -14,7 +14,7 @@ public class MagpieRunner2
 	public static void main(String[] args)
 	{
 		Magpie2 maggie = new Magpie2();
-        return hiii;
+
 		
 		System.out.println (maggie.getGreeting());
 		Scanner in = new Scanner (System.in);

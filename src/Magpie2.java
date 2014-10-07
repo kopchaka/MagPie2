@@ -18,7 +18,7 @@ public class Magpie2
 	 */
 	public String getGreeting()
 	{
-		return "Hello, let's talk.";
+		return "Tell me more about your pets.";
 	}
 	
 	/**
@@ -42,6 +42,20 @@ public class Magpie2
 		{
 			response = "Tell me more about your family.";
 		}
+        else if (statement.indexOf("dog") >= 0
+            || statement.indexOf("cat") >= 0)
+        {
+            response = "Tell me more about your pets.";
+        }
+        else if (statement.indexOf("Mr. Tanczos") >= 0)
+        {
+            response = "Mr. Tanczos is amazing";
+        }
+        else if (statement.length()<1)
+        {
+        response = "say something please";
+        }
+
 		else
 		{
 			response = getRandomResponse();
@@ -55,7 +69,7 @@ public class Magpie2
 	 */
 	private String getRandomResponse()
 	{
-		final int NUMBER_OF_RESPONSES = 4;
+		final int NUMBER_OF_RESPONSES = 6;
 		double r = Math.random();
 		int whichResponse = (int)(r * NUMBER_OF_RESPONSES);
 		String response = "";
@@ -76,7 +90,14 @@ public class Magpie2
 		{
 			response = "You don't say.";
 		}
-
+        else if (whichResponse == 4)
+        {
+            response = "Ouch.";
+        }
+        else if (whichResponse == 5)
+        {
+            response = "Thats cool.";
+        }
 		return response;
 	}
 }
