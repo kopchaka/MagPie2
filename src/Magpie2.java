@@ -18,7 +18,7 @@ public class Magpie2
 	 */
 	public String getGreeting()
 	{
-		return "Tell me more about your pets.";
+		return "Hello let's talk!";
 	}
 	
 	/**
@@ -47,10 +47,15 @@ public class Magpie2
         {
             response = "Tell me more about your pets.";
         }
-        else if (statement.indexOf("Mr. Tanczos") >= 0)
+        else if (statement.indexOf("Mr.") >= 0)
         {
-            response = "Mr. Tanczos is amazing";
+            response = "He sounds like a good teacher";
         }
+        else if (statement.indexOf("Ms.") >= 0 ||statement.indexOf("Mrs.") >= 0 )
+        {
+            response = "She sounds like a good teacher";
+        }
+
         else if (statement.length()<1)
         {
         response = "say something please";
