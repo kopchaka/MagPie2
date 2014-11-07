@@ -42,8 +42,8 @@ public class Magpie2
 		{
 			response = "Tell me more about your family.";
 		}
-        else if (statement.indexOf("dog") >= 0
-            || statement.indexOf("cat") >= 0)
+        else if (statement.indexOf("bird") >= 0
+            || statement.indexOf("fish") >= 0)
         {
             response = "Tell me more about your pets.";
         }
@@ -54,6 +54,18 @@ public class Magpie2
         else if (statement.indexOf("Ms.") >= 0 ||statement.indexOf("Mrs.") >= 0 )
         {
             response = "She sounds like a good teacher";
+        }
+
+        else if(statement.indexOf("horse") >= 0) {
+            response = "I love them!!!";
+        }
+
+        else if(statement.indexOf("zebra") >= 0) {
+            response = "Ima a zebra!!!";
+        }
+
+        else if (statement.indexOf("usher") >= 0) {
+        response = "I love his music!!!";
         }
 
         else if (statement.length()<1)
